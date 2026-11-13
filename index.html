@@ -16,6 +16,11 @@ Course:
 <button type="button" onclick="add()">Add Student</button>
 <button type="button" onclick="clearData()">Clear</button>
 
+<h3>Search Student</h3>
+Search Roll No:
+<input type="text" id="search">
+<button type="button" onclick="searchStudent()">Search</button>
+
 <p id="result"></p>
 <hr>
 
@@ -48,7 +53,15 @@ function clearData() {
     document.getElementById("result").innerHTML="";
 }
 
-
+function searchStudent() {
+    if(document.getElementById("search").value == document.getElementById("roll").value &&
+       document.getElementById("search").value!="") {
+        alert("Student Found: " + document.getElementById("name").value);
+    }
+    else {
+        alert("Student Not Found");
+    }
+}
 </script>
 </body>
 </html>
